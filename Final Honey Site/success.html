@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! | Bee Happy Honey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-yellow': '#FACC15',
+                        'brand-dark': '#78350F',
+                        'brand-cream': '#FEF3C7',
+                        'brand-accent': '#10B981',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50 text-brand-dark min-h-screen flex flex-col justify-center items-center text-center">
+
+
+    <div class="max-w-xl mx-auto p-8 bg-brand-cream rounded-xl shadow-2xl border border-brand-yellow">
+        <h1 class="text-5xl font-extrabold text-brand-dark mb-4">
+            Thank You! 🍯
+        </h1>
+        <p class="text-xl text-brand-dark mb-6">
+            Your order inquiry has been securely sent to the Bee Happy Honey team.
+        </p>
+        <p class="text-lg text-gray-700 mb-8">
+            We will review your request and get in touch with you soon!
+        </p>
+        
+        <a href="/" class="inline-block bg-brand-dark text-white text-lg font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-brand-dark/90 transition duration-200">
+            Return to Home Page
+        </a>
+    </div>
+
+
+</body>
+</html>
