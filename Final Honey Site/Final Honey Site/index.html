@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee Happy Honey | Taste the Happiness</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-yellow': '#FACC15', /* Honey Yellow */
+                        'brand-dark': '#78350F',  /* Dark Brown for text */
+                        'brand-cream': '#FEF3C7', /* Light background */
+                        'brand-accent': '#10B981',/* Green Accent */
+                    },
+                    boxShadow: {
+                        'hive': '0 10px 30px -5px rgba(120, 53, 15, 0.4), 0 4px 6px -2px rgba(120, 53, 15, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom styling for the hero section background effect */
+        .hero-section {
+            background: linear-gradient(180deg, #FEF3CC 0%, #F5F5F4 100%);
+        }
+        /* Custom styling for the form input borders */
+        .form-input {
+            border-color: #FACC15; /* Brand Yellow border */
+            transition: border-color 0.3s;
+        }
+        .form-input:focus {
+            border-color: #78350F; /* Darker border on focus */
+            box-shadow: 0 0 0 2px rgba(120, 53, 15, 0.2);
+        }
+        /* Styling for the custom checkbox */
+        .captcha-checkbox:checked {
+            background-color: #78350F; /* Dark brown checked state */
+            border-color: #78350F;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-brand-dark">
+
+
+    <section class="hero-section text-center py-16 sm:py-24 border-b border-brand-yellow">
+        <div class="container mx-auto px-4">
+            <h1 class="text-6xl sm:text-7xl font-extrabold text-brand-dark tracking-tighter mb-2">
+                BEE HAPPY HONEY
+            </h1>
+            <p class="text-2xl sm:text-3xl font-light italic text-brand-dark/80 mb-12">
+                🍯 Taste the happiness 🐝
+            </p>
+
+
+            <div class="mx-auto max-w-xl shadow-hive rounded-2xl overflow-hidden transform hover:scale-[1.01] transition duration-300">
+                <img 
+                    src="bee-honey.jpg" 
+                    alt="A vibrant image of a jar of Bee Happy Honey on a wooden table." 
+                    class="w-full h-auto"
+                >
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-16 sm:py-24 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-10 text-brand-dark">
+                Ready to Order? Get in Touch!
+            </h2>
+
+
+            <form 
+                id="contact-form"
+                class="bg-brand-cream p-8 rounded-xl shadow-2xl border border-brand-yellow" 
+                method="POST" 
+                action="https://formspree.io/f/mldopkwg">
+                
+                <p class="text-center text-gray-700 mb-6">
+                    Please tell us what you'd like to order and your contact details.
+                </p>
+
+
+                <div class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-brand-dark mb-1">Your Name</label>
+                        <input type="text" id="name" name="Name" required class="form-input w-full p-3 border-2 rounded-lg focus:outline-none">
+                    </div>
+
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-brand-dark mb-1">Your Email</label>
+                        <input type="email" id="email" name="Email" required class="form-input w-full p-3 border-2 rounded-lg focus:outline-none">
+                    </div>
+                    
+                    <div>
+                        <label for="order" class="block text-sm font-medium text-brand-dark mb-1">Your Order / Message</label>
+                        <textarea id="order" name="Order Details" rows="4" required placeholder="Example: 2 jars of 227g honey and your collection preference." class="form-input w-full p-3 border-2 rounded-lg focus:outline-none"></textarea>
+                    </div>
+
+
+                    <div class="flex items-center pt-2 pb-4">
+                        <input type="checkbox" id="captcha" name="_gotcha" required 
+                               class="captcha-checkbox w-5 h-5 border-2 border-brand-dark rounded mr-3 cursor-pointer appearance-none checked:border-transparent focus:outline-none focus:ring-2 focus:ring-brand-yellow">
+                        <label for="captcha" class="text-base font-medium text-brand-dark">
+                            I am not a robot
+                        </label>
+                    </div>
+
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-brand-dark text-white text-lg font-bold py-3 rounded-lg shadow-lg hover:bg-brand-dark/90 transition duration-200">
+                            Send Order Inquiry
+                        </button>
+                    </div>
+                </div>
+            </form>
+            
+            <p class="text-center text-sm text-gray-500 mt-3">
+                *Submitting this form securely sends your order inquiry.*
+            </p>
+
+
+            <div class="mt-12 text-center">
+                <h3 class="text-xl font-semibold mb-4 text-brand-dark">Find Us on Social Media:</h3>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://facebook.com/beehappyhoneyuk" target="_blank" 
+                       class="p-4 rounded-full shadow-lg bg-blue-600 hover:bg-blue-700 transition duration-150">
+                        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.176 3.77 9.444 8.705 10.23V15.5h-2.5v-3h2.5v-1.875c0-2.484 1.493-3.856 3.72-3.856 1.056 0 2.158.188 2.158.188v2.36h-1.25c-1.22 0-1.604.757-1.604 1.54v1.84h2.72l-.437 3h-2.283v6.73c4.935-.786 8.705-5.054 8.705-10.23C22 6.477 17.523 2 12 2z"/></svg>
+                    </a>
+                    
+                    <a href="https://instagram.com/beehappyhoneyuk" target="_blank" 
+                       class="p-4 rounded-full shadow-lg bg-pink-500 hover:bg-pink-600 transition duration-150">
+                        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c2.716 0 3.056.012 4.123.064 1.066.052 1.772.235 2.418.497.643.262 1.155.619 1.666 1.13.511.511.868 1.023 1.13 1.666.262.646.444 1.352.497 2.418.052 1.067.064 1.407.064 4.123s-.012 3.056-.064 4.123c-.052 1.066-.235 1.772-.497 2.418-.262.643-.619 1.155-1.13 1.666-.511.511-.868 1.023-1.666 1.13-.646.262-1.352.444-2.418.497-1.067.052-1.407.064-4.123.064s-3.056-.012-4.123-.064c-1.066-.052-1.772-.235-2.418-.497-.643-.262-1.155-.619-1.666-1.13-.511-.511-.868-1.023-1.13-1.666-.262-.646-.444-1.352-.497-2.418C2.012 15.056 2 14.716 2 12s.012-3.056.064-4.123c.052-1.066.235-1.772.497-2.418.262-.643.619-1.155 1.13-1.666.511-.511 1.023-.868 1.666-1.13.646-.262 1.352-.444 2.418-.497C8.944 2.012 9.284 2 12 2zm0 2.217c-2.613 0-2.91.011-3.931.061-1.02.05-1.57.215-2.022.404-.45.19-.775.45-1.04.716-.264.264-.526.59-.716 1.04-.19.452-.355.992-.404 2.022-.05 1.021-.061 1.318-.061 3.931s.011 2.91.061 3.931c.05 1.02.215 1.57.404 2.022.19.45.45.775.716 1.04.264.264.59.526 1.04.716.452.19.992.355 2.022.404 1.021.05 1.318.061 3.931.061s2.91-.011 3.931-.061c1.02-.05 1.57-.215 2.022-.404.45-.19.775-.45 1.04-.716.264-.264.526-.59.716-1.04.19-.452.355-.992.404-2.022.05-1.021.061-1.318.061-3.931s-.011-2.91-.061-3.931c-.05-1.02-.215-1.57-.404-2.022-.19-.45-.45-.775-.716-1.04-.264-.264-.59-.526-1.04-.716-.452-.19-.992-.355-2.022-.404C14.91 4.228 14.613 4.217 12 4.217zm0 1.956c3.21 0 3.55.012 4.622.062 1.066.052 1.572.235 2.218.497.643.262 1.155.619 1.666 1.13.511.511.868 1.023 1.13 1.666.262.646.444 1.352.497 2.418.052 1.067.064 1.407.064 4.123s-.012 3.056-.064 4.123c-.052 1.066-.235 1.772-.497 2.418-.262.643-.619 1.155-1.13 1.666-.511.511-.868 1.023-1.666 1.13-.646.262-1.352.444-2.418.497-1.067.052-1.407.064-4.123.064s-3.056-.012-4.123-.064c-1.066-.052-1.772-.235-2.418-.497-.643-.262-1.155-.619-1.666-1.13-.511-.511-.868-1.023-1.13-1.666-.262-.646-.444-1.352-.497-2.418C4.012 15.056 4 14.716 4 12s.012-3.056.064-4.123c.052-1.066.235-1.772.497-2.418.262-.643.619-1.155 1.13-1.666.511-.511 1.023-.868 1.666-1.13.646-.262 1.352-.444 2.418-.497C8.45 6.228 8.79 6.217 12 6.217zm0 3.731c-2.47 0-3.921 1.45-3.921 3.921s1.45 3.921 3.921 3.921 3.921-1.45 3.921-3.921-1.45-3.921-3.921-3.921zm0 1.956c1.235 0 1.965.73 1.965 1.965s-.73 1.965-1.965 1.965-1.965-.73-1.965-1.965.73-1.965 1.965-1.965zm5.176-3.832c0 .41-.336.746-.746.746s-.746-.336-.746-.746.336-.746.746-.746.746.336.746.746z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-brand-dark text-center text-brand-cream/80 text-sm p-4 mt-8">
+        &copy; 2024 Bee Happy Honey. Local Standish, UK Producer.
+    </footer>
+    
+</body>
+</html>
